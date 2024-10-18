@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tutorial for React Learners</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="navbar">
+        <a href="#section1">Variables & Constants</a>
+        <a href="#section2">Arrow Functions</a>
+        <a href="#section3">Destructuring</a>
+        <a href="#section4">Spread & Rest Operator</a>
+        <a href="#section5">Array Methods</a>
+        <a href="#section6">Template Literals</a>
+        <a href="#section7">Promises & Async/Await</a>
+        <a href="#section8">Classes & Objects</a>
+        <a href="#section9">Modules</a>
+        <a href="#section10">Ternary Operator</a>
+    </nav>
+
+    <header>
+        <h1>JavaScript Tutorial for React Learners</h1>
+        <p>Understanding JavaScript is essential before diving into React. This tutorial covers fundamental JavaScript concepts that React developers should be familiar with.</p>
+    </header>
+
+    <section id="section1">
+        <h2>1. Variables and Constants</h2>
+        <p>In JavaScript, we use <code>var</code>, <code>let</code>, and <code>const</code> to declare variables.</p>
+        <pre><code>
+let name = 'React Learner'; // let allows the value to be changed
+const appName = 'React';    // const value cannot be changed
+        </code></pre>
+        <p><strong>Example:</strong></p>
+        <pre><code>
+let age = 25;
+const pi = 3.14;
+
+age = 26; // valid
+pi = 3.15; // Error: Assignment to constant variable
+        </code></pre>
+    </section>
+
+    <section id="section2">
+        <h2>2. Arrow Functions</h2>
+        <p>Arrow functions are a shorter way to write functions in JavaScript. They are commonly used in React for defining functional components and callbacks.</p>
+        <pre><code>
+const greet = () => {
+  console.log('Hello, welcome to React!');
+};
+
+greet(); // Outputs: Hello, welcome to React!
+        </code></pre>
+    </section>
+
+    <section id="section3">
+        <h2>3. Destructuring</h2>
+        <p>Destructuring allows you to extract values from arrays or properties from objects into distinct variables.</p>
+        <pre><code>
+// Example with Arrays:
+const numbers = [1, 2, 3];
+const [first, second, third] = numbers;
+
+// Example with Objects:
+const user = { name: 'Mandeep', age: 25 };
+const { name, age } = user;
+        </code></pre>
+    </section>
+
+    <section id="section4">
+        <h2>4. Spread and Rest Operator</h2>
+        <p>Spread is used to expand an array or object, while Rest collects remaining elements into an array.</p>
+        <pre><code>
+// Spread Example
+const numbers = [1, 2, 3];
+const newNumbers = [...numbers, 4, 5];
+
+// Rest Example
+const sum = (...args) => args.reduce((total, current) => total + current, 0);
+        </code></pre>
+    </section>
+
+    <section id="section5">
+        <h2>5. Array Methods</h2>
+        <p>JavaScript provides various methods for arrays that are frequently used in React.</p>
+        <pre><code>
+// map() Method Example
+const numbers = [1, 2, 3];
+const doubled = numbers.map((num) => num * 2);
+
+// filter() Method Example
+const evenNumbers = numbers.filter((num) => num % 2 === 0);
+        </code></pre>
+    </section>
+
+    <section id="section6">
+        <h2>6. Template Literals</h2>
+        <p>Template literals allow you to create strings with embedded expressions. Use backticks (`) instead of single or double quotes.</p>
+        <pre><code>
+const name = 'React Learner';
+const greeting = `Hello, ${name}!`;
+        </code></pre>
+    </section>
+
+    <section id="section7">
+        <h2>7. Promises and Async/Await</h2>
+        <p>JavaScript promises handle asynchronous code. With async/await, you can handle promises more cleanly.</p>
+        <pre><code>
+// Promise Example
+const fetchData = () => {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve('Data loaded'), 1000);
+  });
+};
+
+fetchData().then((message) => console.log(message));
+
+// Async/Await Example
+const fetchData = async () => {
+  const result = await new Promise((resolve) => {
+    setTimeout(() => resolve('Data loaded'), 1000);
+  });
+  console.log(result);
+};
+        </code></pre>
+    </section>
+
+    <section id="section8">
+        <h2>8. Classes and Objects</h2>
+        <p>JavaScript classes are used to create objects. In React, components can be written as classes, though functional components are now more common.</p>
+        <pre><code>
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  greet() {
+    console.log(`Hello, my name is ${this.name}`);
+  }
+}
+
+const mandeep = new Person('Mandeep', 25);
+mandeep.greet(); // Hello, my name is Mandeep
+        </code></pre>
+    </section>
+
+    <section id="section9">
+        <h2>9. Modules</h2>
+        <p>JavaScript modules allow you to organize code into separate files.</p>
+        <pre><code>
+// Exporting a Module
+export const add = (a, b) => a + b;
+
+// Importing a Module
+import { add } from './math';
+        </code></pre>
+    </section>
+
+    <section id="section10">
+        <h2>10. Ternary Operator</h2>
+        <p>The ternary operator is a shorthand for <code>if-else</code> conditions, often used in React JSX for conditional rendering.</p>
+        <pre><code>
+const isLoggedIn = true;
+const message = isLoggedIn ? 'Welcome back!' : 'Please sign in';
+        </code></pre>
+    </section>
+
+    <footer>
+        <p>These JavaScript concepts are vital when working with React. Understanding them will make your React development smoother and help you write cleaner code.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
