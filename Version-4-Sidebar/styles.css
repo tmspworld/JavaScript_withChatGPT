@@ -1,0 +1,94 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar Navigation */
+#sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background: #333;
+  padding-top: 60px;
+  transition: left 0.3s;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+#sidebar .toggle-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 30px;
+  color: white;
+  display: none;
+}
+
+#sidebar ul {
+  list-style-type: none;
+}
+
+#sidebar ul li {
+  padding: 15px 20px;
+}
+
+#sidebar ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+#sidebar ul li a.active, #sidebar ul li a:hover {
+  background: #575757;
+}
+
+/* Main Content */
+#main-content {
+  margin-left: 250px;
+  padding: 20px;
+  width: 100%;
+}
+
+header h1 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+/* Responsive Sidebar for Small Screens */
+@media (max-width: 768px) {
+  #sidebar {
+      left: -250px;
+  }
+  
+  #sidebar .toggle-btn {
+      display: block;
+      position: absolute;
+      left: 15px;
+      top: 15px;
+  }
+
+  #main-content {
+      margin-left: 0;
+      padding: 20px;
+  }
+
+  #sidebar.open {
+      left: 0;
+  }
+}

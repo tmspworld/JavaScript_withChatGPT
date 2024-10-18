@@ -33,8 +33,10 @@ nav a:hover {
 
 header {
   margin-top: 80px;
+  margin-bottom: 30px;
   padding: 2rem;
-  background-color: #333;
+  /* background-color: #333; */
+  background-color: #808505;
   color: white;
   text-align: center;
 }
